@@ -10,7 +10,9 @@ angular.module('starter',
   'event.services',
    'date.services',
    'like.services',
-   'login.services'
+   'login.services',
+     'ngIOS9UIWebViewPatch', 
+   'stripe.service'
   ])
 
 .run(function($ionicPlatform) {

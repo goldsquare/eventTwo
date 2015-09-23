@@ -33,10 +33,16 @@ angular.module('starter.controllers', [])
   };
 })
 
-
-.controller('EventCtrl', function ($http,$scope, $stateParams, FbLoginFactory, TwitterLoginFactory, LikeFactory, EventFactory, DateFactory) {
+//app.use('/charge/:token/:amount', api.charge);
+.controller('EventCtrl', function ($http,$scope, StripeFactory,  $stateParams, FbLoginFactory, TwitterLoginFactory, LikeFactory, EventFactory, DateFactory) {
 
       EventFactory.get($scope, $stateParams);
+
+      $scope.buy = function()
+      {
+        StripeFactory.get();
+      }
+
 
       $scope.get = function()
       {
